@@ -75,10 +75,12 @@ if __name__ == "__main__":
     widget_manager = WidgetManager()
     widget_manager.setWindowTitle("python final: seasonal nfl stats")
     widget_manager.add_label("Instructions", QtCore.Qt.AlignCenter)
-    widget_manager.add_label("Select the name of the football team you would like the stats for\n"
-                             "Press OK to fetch the data when you have a team selected", QtCore.Qt.AlignCenter)
+    widget_manager.add_label("Select the name of the football team you would like to see the stats of\n"
+                             "Press Ok to fetch the data when you have a team selected", QtCore.Qt.AlignCenter)
 
     combo_box = widget_manager.add_combo_box()
+    combo_box.setEditable(True)
+    combo_box.lineEdit().setAlignment(QtCore.Qt.AlignCenter)
     combo_box.addItems(team_lookup.keys())
 
     widget_manager.add_button("Ok", pressed)
