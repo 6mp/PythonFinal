@@ -39,7 +39,7 @@ team_lookup = {"Arizona Cardinals": "CAR",
                "Washington Football Team": "WAS"}
 
 
-def pressed(button_widget: QtWidgets.QPushButton):
+def pressed(button_widget: QtWidgets.QPushButton) -> None:
     button_widget.setText("Loading...")
     button_widget.repaint()
 
