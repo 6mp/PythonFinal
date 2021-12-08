@@ -3,7 +3,7 @@ from PySide6 import QtWidgets, QtCore
 from PySide6.QtGui import QPalette, QColor
 
 
-def setup_gui():
+def setup_gui() -> QtWidgets.QApplication:
     """
     SetupGui function which creates main window and sets theme
     :return:
@@ -33,7 +33,7 @@ def setup_gui():
 
 
 class AlignDelegate(QtWidgets.QStyledItemDelegate):
-    def initStyleOption(self, option, index):
+    def initStyleOption(self, option, index) -> None:
         """
         function to automatically align table items
         :param option:
