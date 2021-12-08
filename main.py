@@ -89,7 +89,7 @@ def main() -> None:
     global info_table
     info_table = widget_manager.add_table(5, 8)
     info_table.setHorizontalHeaderLabels([" Win % ", " Interceptions ", " Fumbles ", " Rush Yards / Attempt ",
-                                          "Pass Yards / Attempt ", " Avg Yards / Play ", " % Drives With Points ",
+                                          " Pass Yards / Attempt ", " Avg Yards / Play ", " % Drives With Points ",
                                           " % Drives With Turnovers "])
     info_table.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.ResizeToContents)
     info_table.horizontalHeader().setSectionResizeMode(0, QtWidgets.QHeaderView.Stretch)
