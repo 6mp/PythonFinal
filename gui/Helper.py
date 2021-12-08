@@ -33,7 +33,7 @@ def setup_gui() -> QtWidgets.QApplication:
 
 
 class AlignDelegate(QtWidgets.QStyledItemDelegate):
-    def initStyleOption(self, option, index) -> None:
+    def initStyleOption(self, option: QtWidgets.QStyleOptionViewItem, index: QtCore.QModelIndex) -> None:
         """
         function to automatically align table items
         :param option:
