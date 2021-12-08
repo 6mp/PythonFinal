@@ -2,7 +2,6 @@ from gui.WidgetManager import *
 from gui.Helper import *
 from sportsipy.nfl.teams import Team
 
-
 info_table = None
 combo_box = None
 
@@ -69,7 +68,7 @@ def pressed(button_widget: QtWidgets.QPushButton):
     button_widget.setText("Ok")
 
 
-if __name__ == "__main__":
+def main() -> None:
     application = setup_gui()
 
     widget_manager = WidgetManager()
@@ -98,3 +97,7 @@ if __name__ == "__main__":
     widget_manager.show()
 
     sys.exit(application.exec())
+
+
+if __name__ == "__main__":
+    main()
