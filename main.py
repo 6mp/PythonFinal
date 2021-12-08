@@ -69,6 +69,7 @@ def pressed(button_widget: QtWidgets.QPushButton):
 
 
 def main() -> None:
+
     application = setup_gui()
 
     widget_manager = WidgetManager()
@@ -77,6 +78,7 @@ def main() -> None:
     widget_manager.add_label("Select the name of the football team you would like to see the stats of\n"
                              "Press Ok to fetch the data when you have a team selected", QtCore.Qt.AlignCenter)
 
+    global combo_box
     combo_box = widget_manager.add_combo_box()
     combo_box.setEditable(True)
     combo_box.lineEdit().setAlignment(QtCore.Qt.AlignCenter)
@@ -84,6 +86,7 @@ def main() -> None:
 
     widget_manager.add_button("Ok", pressed)
 
+    global info_table
     info_table = widget_manager.add_table(5, 8)
     info_table.setHorizontalHeaderLabels([" Win % ", " Interceptions ", " Fumbles ", " Rush Yards / Attempt ",
                                           "Pass Yards / Attempt ", " Avg Yards / Play ", " % Drives With Points ",
