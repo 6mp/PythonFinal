@@ -69,7 +69,6 @@ def pressed(button_widget: QtWidgets.QPushButton) -> None:
 
 
 def main() -> None:
-
     application = setup_gui()
 
     widget_manager = WidgetManager()
